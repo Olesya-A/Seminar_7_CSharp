@@ -41,12 +41,9 @@ void Print2DArray(int[,] numbers, int height, int width)
 int Changed2DArray(int[,] numbers, int height, int width)
 {
     int sum = 0;
-    for (int i = 0; i < height; i++)
+    for (int i = 0; i < height && i< width; i++)
     {
-        for (int j = 0; j < width; j++)
-        {
-            if (i == j) sum = sum + numbers[i, j];
-        }
+        sum += numbers[i, i];
     }
     return sum;
 }
