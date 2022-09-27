@@ -7,7 +7,7 @@ int width = EnterInt("Enter width: ");
 int[,] numbers = new int[height, width];
 Fill2DArray(numbers, height, width);
 Print2DArray(numbers, height, width);
-Console.WriteLine($"Сумма элементов на главной диагонали равна {Changed2DArray(numbers, height, width)}");
+Console.WriteLine($"Сумма элементов на главной диагонали равна {SumNumbersOnMainDiagonal(numbers, height, width)}");
 
 int EnterInt(string prompt)
 {
@@ -38,7 +38,7 @@ void Print2DArray(int[,] numbers, int height, int width)
     }
 }
 
-int Changed2DArray(int[,] numbers, int height, int width)
+int SumNumbersOnMainDiagonal(int[,] numbers, int height, int width)
 {
     int sum = 0;
     for (int i = 0; i < height && i< width; i++)
